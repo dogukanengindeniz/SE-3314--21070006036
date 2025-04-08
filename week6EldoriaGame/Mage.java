@@ -1,18 +1,17 @@
-package week6EldoriaGame;
+package org.example;
 
 public class Mage extends Hero implements Questable{
+    String quest;
 
-    public Mage(String name, int level) {
-        super(name, level);
+    public Mage(String n, int l) {
+        super(n, l);
+    }
+    
+    public void acceptQuest(String questName){
+        quest = questName;
     }
 
     public void castSpell(){
-        System.out.println(name + " casts a spell!");
-    }
-
-
-    @Override
-    public void acceptQuest(String questName) {
-        System.out.println(name + " the week6EldoriaGame.Mage has accepted the quest: " + questName);
+        System.out.print(name + " casts spell!");
     }
 }
